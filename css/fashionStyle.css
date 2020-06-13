@@ -10,17 +10,27 @@ li{
 a{
 	text-decoration: none;
 }
+.media4_only {
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: pink;
+    display: none;
+}
 .wrapper{
 	width: 100%;
 	background-color: #de1a0c;
 	display: grid;
-	align-items: center;
+	
+	}
 
-}
 .container{
 	background-color: white;
 	width: 90%;
 	margin: 50px auto;
+	display: grid;
 
 }
 .top{
@@ -114,11 +124,11 @@ nav{
 	text-transform: uppercase;
 	color: white;
 }
-.shopping_cart{
+.shopping_cart, .shopping_cart_media{
 	background-color: #de1a0c;
 	opacity: 0.9;
 }
-.shopping_cart a{
+.shopping_cart a, .shopping_cart_media a{
 	font-size: 16px;
 	text-transform: uppercase;
 	color: white;
@@ -137,3 +147,125 @@ nav{
 	margin-right: 7px;
 }
 	/*************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*********responsive media query*********/
+	@media (max-width: 615px){
+		.social{
+			display: none;
+		}
+		
+    	.input_search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+   .img img{
+   	display: none;
+   }
+	}
+
+
+	@media (max-width: 710px)
+    {
+    	.img img{
+    		width: 100px;
+    	
+    	}
+    	.social a img{
+    		width: 25px;
+    		margin: 0 2px;
+    	}
+}
+    
+
+
+	@media  (max-width: 800px){
+         nav{
+         	order: -1;
+         }
+         ul.main_menu{
+              display: block;
+    position: absolute;
+    right: 39px;
+    top: 88px;
+    z-index: 100;
+    background: red;
+    padding: 18px;
+    width: 35%;
+    text-align: center;
+    display: none;
+
+         }
+         ul.main_menu li {
+    margin: 20px 0;
+    padding: 15px;
+}
+.media4_only {
+   padding: 15px;
+   display: flex;
+}
+a.shopping_count {
+    background: red;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: -22px;
+}
+.pos{
+	position: relative;
+}
+.shopping_count{
+
+}
+
+span#hamburgerFs {
+    order: 1;
+}
+span#hamburgerFs i {
+    font-size: 25px;
+    color: red;
+}
+ul.shopping_cart{
+	display: none;
+}
+
+
+i.fas.fa-shopping-cart {
+    font-size: 25px;
+    color: white;
+}
+ul.shopping_cart_media{
+	background-color: transparent;
+}
+
+	}
+
+
+
+	@media (max-width: 885px){
+         ul.main_menu a, ul.shopping_cart a{
+         	font-size: 14px;
+         }
+	}
