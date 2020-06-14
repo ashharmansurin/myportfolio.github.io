@@ -9,100 +9,104 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 
-        <link rel="stylesheet" type="text/css" href="../css/fashionStyle.css">
-        <title></title>
-        
+       
+        <title> responsive slider</title>
+        <style type="text/css">
+            *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            .men{
+                width: 100%;
+                padding: 10px;
+            }
+            .men_container{
+                width: 100%;
+                height: 60vh;
+                border: 1px solid red;
+                padding: 20px;
+            }
+            .men_f{
+                width: 45%;
+                border: 2px solid black;
+                height: 100%;
+            }
+            .mens{
+                width: 22%;
+                height: 100%;
+                border:2px solid yellow;
+                padding: 7px;
+            }
+            .men_container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+    align-items: center;
+            }
+            .men_f img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .mens img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+            }
+            p.menu_title {
+    margin-top: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+}
+.price{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+        </style>
     </head>
     <body>
     <div class="wrapper"><!--start wrapper-->
-        <div class="container"><!--start wrapper--> 
-
-                   <div class="media4_only">
-                            <img src="../png/art1.png" class="logo_media">
-                        <span id="hamburgerFs"><i class="fas fa-bars"></i></span>
-                            <ul class="shopping_cart_media">
-                                                        <li class="pos">
-                                                                <i class="fas fa-shopping-cart"></i>
-                                                                <a href="" class="shopping_count">0</a>
-                                                        </li>
-                                </ul>
-                                <img src="">
-                   </div>
-
-
-
-                        <div class="top">
-                                <div class="free_shipping">
-                                        <img src="../png/shop.png">
-                                        <p>free shipping in all over india</p>
-                                </div>
-                                <div class="money_back">
-                                        <img src="../png/money2.png">
-                                        <p>100 % money back guarantee</p>
-                                </div>
-                                <div class="online">
-                                        <img src="../png/time.png">
-                                        <p>online support 24/7</p>
-                                </div>
-                        </div>
-
-                        <section class="sub_nav">
-                                 <div class="img">
-                                        <img src="../png/art1.png" class="logo">
-                                 </div>
-                                        <div class="input_search">
-                                                <input type="search" name=""><button><i class="fas fa-search-plus"></i></button>
-                                        </div>
-                                        <div class="social">
-                                                <li><a href=""><img src="../png/facebook.png"></a></li>
-                                <li><a href=""><img src="../png/logo.png"></a></li>
-                                <li><a href=""><img src="../png/linkedin.png"></a></li>
-                                <li><a href=""><img src="../png/twitter.png"></a></li>
-                                <li><a href=""><img src="../png/youtube.png"></a></li>
-                                        </div>
-                        
-                        </section>
-
-                        <nav>
-                                <ul class="main_menu">
-                                        <li><a href="">Home</a></li>
-                                        <li><a href="">Shop</a></li>
-                                        <li><a href="">Feature</a></li>
-                                        <li><a href="">Mega Group</a></li>
-                                        <li><a href="">About</a></li>
-                                        <li><a href="">Contact</a></li>
-                                </ul>
-
-                                <ul class="shopping_cart">
-                                        <li><i class="fas fa-shopping-cart"></i><a href="">Shopping Cart</a>
-                                                <a href="" class="shopping_count">(0)</a>
-                                        </li>
-                                </ul>
-                        </nav>
-
-                        <section class="product">
-                                <div class="card_pro" style="background-image: url('../images/card_pro.jpg');">
-                        <div class="card_body">
-                                <h1>clothes</h1>
-                                <a href="" class="card_pro_link">Click Here</a>
-                        </div>
-                                </div>
-                                <div class="card_pro" style="background-image: url('../images/card_pro.jpg');">
-                        <div class="card_body">
-                                <h1>bags</h1>
-                                <a hsref="" class="card_pro_link">Click Here</a>
-                        </div>
-                                </div>
-                                <div class="card_pro" style="background-image: url('../images/card_pro.jpg');">
-                        <div class="card_body">
-                                <h1>footwears</h1>
-                                <a href="" class="card_pro_link">Click Here</a>
-                        </div>
-                                </div>
-                        </section>
-
-                    
-        </div><!--end container-->   
+        <!--start wrapper--> 
+              <section class="men">
+                 <div class="men_container">
+                      <div class="men_f ">
+                          <img src="images/slider1.jpg" >
+                      </div>
+                      <div class="men_s  mens">
+                          <img src="images/slider2.jpg">
+                          <div class="mens_body">
+                              <p class="menu_title">hello how are you</p>
+                          </div>
+                      </div>
+                      <div class="men_t  mens">
+                          <img src="images/slider3.jpg">
+                          <div class="mens_body">
+                              <p class="menu_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+                 
+            </section>
+                   
+      <!--end container-->   
     </div><!--end wrapper-->    
 
 

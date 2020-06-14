@@ -138,11 +138,14 @@ nav{
 	background-color: #de1a0c;
 	opacity: 0.9;
 }
-.shopping_cart a, .shopping_cart_media a{
+.shopping_cart a{
 	font-size: 16px;
 	text-transform: uppercase;
 	color: white;
 
+	}
+	.shopping_cart_media a{
+		color:#de1a0c ;
 	}
 	.hero{
 		width: 100%
@@ -212,9 +215,7 @@ a.card_pro_link {
 	left: 1rem;
 	right: 1rem;
 }
-
-
-
+/***********/
 
 
 
@@ -295,7 +296,7 @@ a.card_pro_link {
    display: flex;
 }
 a.shopping_count {
-    background: red;
+    background: white;
     padding: 5px 10px;
     font-weight: 700;
     border-radius: 50%;
