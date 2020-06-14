@@ -217,9 +217,154 @@ a.card_pro_link {
 }
 /***********/
 
+.men, .women{
+                width: 100%;
+                padding: 10px;
+                height: auto;
+            }
+            .men_container, .women_container{
+                width: 100%;
+                height: auto;
+               
+                padding: 20px;
+            }
+            .men_f, .women_f{
+                width: 45%;
+                
+                height: 100%;
+            }
+            .mens, .womens{
+                width: 22%;
+                height: 100%;
+                padding: 7px;
+            }
+            .men_container, .women_container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+               align-items: center;
+            }
+            .men_f img, .women_f img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .mens img, .womens img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+            }
+            p.men_title , p.women_title {
+    margin-top: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+}
+.women_f {
+    order: 1;
+}
+.price{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.p_icon p{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.p_icon span i{
+    color: #ff9800;
+}
+.p_icon p i{
+    color: blue;
+}
+.add_cart button {
+    background: #de1a0c;
+    border: none;
+    padding: 7px 10px;
+    color: white;
+}
+/******footer*****/
+footer{
+    width: 100%;
+    padding: 10px;
+}
+.footer_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot1 .foot_img{
+    width: 150px;
+}
+.foot_bottom{
+    display: flex;
+}
+.foot2{
+    flex: 2;
+    padding: 10px;
+    border: 1px solid red;
+    flex-basis: 60%;
 
-
-
+}
+.foot1_text {
+    line-height: 1.5;
+}
+.foot1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     border: 1px solid yellow;
+     padding: 6px;
+     flex-basis: 32%;
+}
+.signup_letter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+}
+.foot_bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: left;
+    padding: 10px;
+    grid-gap: 15px;
+        margin-top: 15px;
+}
+.info_cont p,.customer_care p, .store p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+ul.info li {
+    margin-bottom: 10px;
+}
+ul.info{
+    text-transform: capitalize;
+}
+button.subs {
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border: none;
+}
+input[type="search"] {
+    padding: 5px 10px;
+   
+}
+.signup_letter h2{
+	flex-basis: 32%;
+	border: 1px solid blue;
+}
+.form_control{
+	flex-basis: 50%;
+	padding: 5px;
+	border: 1px solid red;
+}
 
 
 
@@ -233,6 +378,12 @@ a.card_pro_link {
 
 
 	/*********responsive media query*********/
+	@media (max-width: 540px){
+		.mens{
+			width: 100%!important;
+		}
+	}
+
 	@media (max-width: 615px){
 		.container{
 			width: 100%;
@@ -250,13 +401,17 @@ a.card_pro_link {
    .logo{
    	display: none;
    }
-  /*  .logo_media{
-   	display: block;
-   } */
+   .h2{
+	flex-basis: 100%;
+}
+.form_control{
+	flex-basis: 100%;
+	
+}
+  
 	}
 
-
-	@media (max-width: 710px)
+@media (max-width: 710px)
     {
     	.logo{
     		width: 100px;
@@ -266,11 +421,12 @@ a.card_pro_link {
     		width: 25px;
     		margin: 0 2px;
     	}
+    	.signup_letter h2{
+	     font-size: 20px;
+}
 }
     
-
-
-	@media  (max-width: 800px){
+@media  (max-width: 800px){
          nav{
          	order: -1;
          }
@@ -331,13 +487,29 @@ i.fas.fa-shopping-cart {
 ul.shopping_cart_media{
 	background-color: transparent;
 }
+}
 
-	}
+@media  (max-width: 840px){
+    	
+    	.foot2{
+    		flex-basis: 100%;
+    	}
+    }
 
-
-
-	@media (max-width: 885px){
+@media (max-width: 885px){
          ul.main_menu a, ul.shopping_cart a{
          	font-size: 14px;
          }
+	}
+@media (max-width: 992px){
+
+		.men_f{
+			width: 100%;
+		}
+		.mens, .womens{
+                width: 45%;
+                height: 100%;
+                padding: 7px;
+                margin-top: 15px;
+            }
 	}

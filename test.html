@@ -17,47 +17,52 @@
               padding: 0;
               box-sizing: border-box;
             }
-            .men{
+            ul{
+                list-style: none;
+            }
+            .men, .women{
                 width: 100%;
                 padding: 10px;
             }
-            .men_container{
+            .men_container, .women_container{
                 width: 100%;
                 height: 60vh;
-                border: 1px solid red;
+               
                 padding: 20px;
             }
-            .men_f{
+            .men_f, .women_f{
                 width: 45%;
-                border: 2px solid black;
+                
                 height: 100%;
             }
-            .mens{
+            .mens, .womens{
                 width: 22%;
                 height: 100%;
-                border:2px solid yellow;
                 padding: 7px;
             }
-            .men_container{
+            .men_container, .women_container{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
-    align-items: center;
+               align-items: center;
             }
-            .men_f img{
+            .men_f img, .women_f img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            .mens img{
+            .mens img, .womens img{
                 width: 100%;
                 height: 70%;
                 object-fit: cover;
             }
-            p.menu_title {
+            p.men_title , p.women_title {
     margin-top: 5px;
     padding-bottom: 8px;
     border-bottom: 1px solid lightgray;
+}
+.women_f {
+    order: 1;
 }
 .price{
     margin: 10px 0;
@@ -65,26 +70,367 @@
     justify-content: space-around;
     align-items: center;
 }
+.p_icon p{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.p_icon span i{
+    color: #ff9800;
+}
+.p_icon p i{
+    color: blue;
+}
+.add_cart button {
+    background: #de1a0c;
+    border: none;
+    padding: 7px 10px;
+    color: white;
+}
+/**********************/
+footer{
+    width: 100%;
+    padding: 10px;
+}
+.footer_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot1 .foot_img{
+    width: 150px;
+}
+.foot_bottom{
+    display: flex;
+}
+.foot2{
+    flex: 2;
+    padding: 10px;
+    border: 1px solid red;
+    flex-basis: 60%;
+
+}
+.foot1_text {
+    line-height: 1.5;
+}
+.foot1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     border: 1px solid yellow;
+     padding: 6px;
+     flex-basis: 32%;
+}
+.signup_letter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+}
+.foot_bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: left;
+    padding: 10px;
+    grid-gap: 15px;
+        margin-top: 15px;
+}
+.info_cont p,.customer_care p, .store p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+ul.info li {
+    margin-bottom: 10px;
+}
+ul.info{
+    text-transform: capitalize;
+}
+button.subs {
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border: none;
+}
+input[type="search"] {
+    padding: 5px 10px;
+   
+}
+/*****carousel*****/
+.contenedor{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.titulo{
+    border-bottom: 3px solid #9751ff;
+}
+.titulo .shape{
+    background: #9751ff;
+    padding: 10px 20px;
+    max-width: 200px;
+    position: relative;
+}
+.right-skew:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  display: block;
+  width: 50px;
+  background: #9751ff;
+/* change background color to same as box   */
+  -webkit-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
+  transform: skew(20deg);
+}
+
+.titulo .shape h2, .titulo .shape i{
+    display: inline-block;
+    margin: 0;
+    color: #fff;
+}
+.titulo .shape i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.txt-titulo{
+    position: absolute;
+    right: 110px;
+    top: 15px;
+    font-size: 13px;
+    color: #605f5f;
+    font-weight: 600;
+}
+.producto{
+    max-width: 280px;
+    vertical-align: top;
+    background: #fff;
+    padding: 10px 0 20px 0;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.producto .contenedor-imagen{
+    min-height: 220px;
+    position: relative;
+}
+.producto .contenedor-imagen img{
+    width: 100%;
+}
+.producto .contenedor-imagen .link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+.producto .contenedor-imagen .img-hover{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all ease-in-out 0.2s;
+}
+.producto:hover .img-hover{
+    opacity: 1;
+}
+.producto .datos{
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
+    padding: 20px;
+}
+.producto .datos h3{
+    margin: 10px 0;
+}
+.producto .datos h3 a{
+    text-decoration: none;
+    color: #2b2b2b;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+}
+.producto .datos h3 a:hover{
+    text-decoration: underline;
+}
+.producto .datos small a{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    color: #5a5a5a;
+    font-size: 11px;
+}
+.producto .datos small{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #5a5a5a;
+}
+.producto .precios{
+    padding: 20px;
+    display: flex
+}
+.producto .precios div{
+  flex-grow: 1;
+}
+.producto .precios div small{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #828282;
+    font-weight: 600;
+}
+.producto .precios div.internet span{
+    font-weight: bold;
+    font-size: 23px;
+    color: #ff0808;
+}
+.producto .precios div span{
+    font-size: 17px;
+    font-weight: 600;
+}
+.producto .btn-carrito{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: #9751ff;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    display: none;
+    transition: all ease-in-out 0.3s;
+}
+.producto .btn-carrito:hover{
+    transform: scale(1.05);
+}
+.producto:hover .btn-carrito{
+    display: block;
+}
+.starrr {
+    display: block; 
+}
+.starrr a {
+    font-size: 16px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #FFD119;
+    text-decoration: none; 
+}
+.slider{
+    margin-top: 20px;
+}
+.slick-prev{
+    font-size: 0;
+    position: absolute;
+    right: 55px;
+    top: -64px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background-image: url(https://dummyimage.com/20x20/ffffff/474747&text=%3C);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-next{
+    font-size: 0;
+    position: absolute;
+    right: 18px;
+    top: -64px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background: url(https://dummyimage.com/20x20/ffffff/474747&text=%3E);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-next:hover, .slick-prev:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 650px){
+    .txt-titulo{
+        display: none;
+    }
+    .titulo .shape h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 600px){
+    .slick-next, .slick-prev{
+        display: none !important;
+    }
+    .titulo .shape{
+        padding: 10px 10px;
+        max-width: 160px;
+    }
+  .producto{
+    max-width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 840px){
+       .foot1{
+        width: 50%;
+       }
+        .foot2{
+            width: 100%!important;
+        }
+    }
+
         </style>
     </head>
     <body>
     <div class="wrapper"><!--start wrapper-->
         <!--start wrapper--> 
-              <section class="men">
-                 <div class="men_container">
-                      <div class="men_f ">
+       <section class="women">
+              <div class="women_container">
+                      <div class="women_f ">
                           <img src="images/slider1.jpg" >
                       </div>
-                      <div class="men_s  mens">
+                      <div class="women_s  womens">
                           <img src="images/slider2.jpg">
-                          <div class="mens_body">
-                              <p class="menu_title">hello how are you</p>
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
                           </div>
                       </div>
-                      <div class="men_t  mens">
+
+
+                      <div class="women_t  womens">
                           <img src="images/slider3.jpg">
-                          <div class="mens_body">
-                              <p class="menu_title">hello how are you</p>
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
                               <div class="price">
                                   <div class="p_icon">
                                       <p><i class="fas fa-dollar-sign"></i> 45.5</p>
@@ -105,6 +451,236 @@
                  </div>
                  
             </section>
+
+            <footer>
+                <div class="footer_container">
+                    <div class="foot1">
+                          <img src="png/art1.png" class="foot_img">
+                          <div class="foot1_text">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat. Duis aute irure dolor in.
+                          </div>
+                    </div>
+                    
+                    <div class="foot2">
+
+                            <div class="signup_letter">
+                                <h2>sign up our news letter</h2>
+                                <div class="form_control">
+                                  <input type="search" name="">
+                                  <button type="submit" class="subs">submit</button>
+                                </div>
+                            </div>
+                               
+                               <hr>
+
+                                <div class="foot_bottom">
+                                    <div class="info_cont">
+                                        <p>Information</p>
+                                       <ul class="info">
+                                           <li>ashhar</li>
+                                            <li>mohammad</li>
+                                             <li>mansuri</li>
+                                             <li>mansuri</li>
+                                       </ul>
+                                   </div>
+
+                                   <div class="customer_care">
+                                        <p>Customer Care</p>
+                                       <ul class="info">
+                                           <li>ashhar</li>
+                                            <li>mohammad</li>
+                                             <li>mansuri</li>
+                                             <li>mansuri</li>
+                                       </ul>
+                                   </div>
+
+                                   <div class="store">
+                                        <p>Store Address</p>
+                                       <ul class="info">
+                                           <li>ashhar mohammad mansuri jdfjdkdfjd</li>
+                                            <li>mohammad</li>
+                                             <li>mansuri</li>
+                                       </ul>
+                                   </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </footer>
+
+
+
+                <section class="carousel_women">
+                    <div class="contenedor">
+        <div class="titulo">
+            <div class="shape right-skew">
+                <i class="fas fa-laptop"></i>
+                <h2>Tecnología</h2>
+            </div>
+            <span class="txt-titulo">Mostrando 4 de 6 elementos</span>
+        </div>
+        <div class="slider carousel">
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Gopro</a></small>
+                    <h3><a href="#">Gopro hero silver 7</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Sony</a></small>
+                    <h3><a href="#">PARLANTE SONY GTK-PG10</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Tbl</a></small>
+                    <h3><a href="#">AUDIFONOS JBL T110 NEGRO</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Google</a></small>
+                    <h3><a href="#">GOOGLE HOME MINI CARBON</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Gopro</a></small>
+                    <h3><a href="#">Gopro hero silver 7</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+            <div class="producto item">
+                <div class="contenedor-imagen">
+                    <a href="#" class="link"></a>
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+1">
+                    <img src="https://dummyimage.com/600x400/dbdbdb/474747&text=imagen+2" class="img-hover">
+                </div>              
+                <div class="datos">
+                    <div class="starrr"></div>
+                    <small><a href="#">Gopro</a></small>
+                    <h3><a href="#">Gopro hero silver 7</a></h3>
+                    <small>SKU: 32383ee090pi</small>
+                </div>
+                <div class="precios">
+                    <div class="internet">
+                        <small>Internet</small>
+                        <span>$189.000</span>
+                    </div>
+                    <div>
+                        <small>Normal</small>
+                        <span>$250.000</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+                </section>
+
+
+       
+
+
+
+
+
+
+
+
                    
       <!--end container-->   
     </div><!--end wrapper-->    
@@ -114,7 +690,44 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-   
+    <script type="text/javascript">
+            //Starrr
+        $('.starrr').starrr({
+        })
+
+        $('.carousel').slick({
+          dots: false,
+          infinite: false,
+          speed: 300,
+          draggable: false,
+          slidesToShow: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+          ]
+        });
     </script>
+    
     </body>
 </html>
