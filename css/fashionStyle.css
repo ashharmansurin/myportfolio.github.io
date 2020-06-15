@@ -17,7 +17,7 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #de1a0c;
+    background: #3d390e;
     display: none;
 }
 .logo_media{
@@ -166,7 +166,7 @@ nav{
 		padding: 10px;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		
-		grid-auto-rows: 200px;
+		grid-auto-rows: 250px;
 		grid-gap: 20px;
 		margin: 40px 0 30px 0;
 	}
@@ -338,16 +338,21 @@ footer{
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: 800;
+    text-transform: uppercase;
 }
+
 ul.info li {
     margin-bottom: 10px;
 }
 ul.info{
     text-transform: capitalize;
 }
+.store i{
+    width: 26px;
+}
 button.subs {
     padding: 5px 10px;
-    background: red;
+    background: #de1a0c;
     color: white;
     border: none;
 }
@@ -359,6 +364,8 @@ input[type="search"] {
 }
 .signup_letter h2{
 	flex-basis: 32%;
+	font-size: 20px;
+    text-transform: capitalize;
 
 
 }
@@ -372,12 +379,13 @@ input[type="search"] {
 .myBlog{
             width: 100%;
             height: auto;
+            margin: 30px 0;
           }
           
           .blog{
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-auto-rows: auto;
             grid-gap: 25px;
             padding: 25px;
@@ -418,6 +426,21 @@ input[type="search"] {
     position: absolute;
     left: 0;
     top: 0;
+    padding: 5px;
+}
+/**bottom**/
+
+hr#bot {
+    width: 75%;
+    margin: 0 auto;
+    color: lightgray;
+}
+.bottom{
+    padding: 15px;
+    margin: 15px 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 
