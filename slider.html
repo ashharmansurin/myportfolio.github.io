@@ -2,168 +2,307 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+    <style>
+       *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            ul{
+                list-style: none;
+            }
+            .men, .women{
+                width: 100%;
+                padding: 10px;
+            }
+            .men_container, .women_container{
+                width: 100%;
+                height: 60vh;
+               
+                padding: 20px;
+            }
+            .men_f, .women_f{
+                width: 45%;
+                
+                height: 100%;
+            }
+            .mens, .womens{
+                width: 22%;
+                height: 100%;
+                padding: 7px;
+            }
+            .men_container, .women_container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+               align-items: center;
+            }
+            .men_f img, .women_f img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .mens img, .womens img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+            }
+            p.men_title , p.women_title {
+    margin-top: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
 }
+.women_f {
+    order: 1;
+}
+.price{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.p_icon p{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.p_icon span i{
+    color: #ff9800;
+}
+.p_icon p i{
+    color: blue;
+}
+.add_cart button {
+    background: #de1a0c;
+    border: none;
+    padding: 7px 10px;
+    color: white;
+}
+/**********************/
+footer{
+    width: 100%;
+    padding: 10px;
+}
+.footer_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot1 .foot_img{
+    width: 150px;
+}
+.foot_bottom{
+    display: flex;
+}
+.foot2{
+    flex: 2;
+    padding: 10px;
+    border: 1px solid red;
+    flex-basis: 60%;
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.foot1_text {
+    line-height: 1.5;
 }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.foot1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     border: 1px solid yellow;
+     padding: 6px;
+     flex-basis: 32%;
 }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.signup_letter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
 }
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.foot_bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: left;
+    padding: 10px;
+    grid-gap: 15px;
+        margin-top: 15px;
 }
-
-.active, .dot:hover {
-  background-color: #717171;
+.info_cont p,.customer_care p, .store p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 800;
 }
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+ul.info li {
+    margin-bottom: 10px;
 }
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+ul.info{
+    text-transform: capitalize;
 }
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+button.subs {
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border: none;
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+input[type="search"] {
+    padding: 5px 10px;
+   
 }
-</style>
-</head>
+    </style>
 <body>
+  
+  <section class="women">
+              <div class="women_container slider">
+                      <div class="women_f ">
+                          <img src="images/slider1.jpg" >
+                      </div>
+                      <div class="women_s  womens">
+                          <img src="images/slider2.jpg">
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-<div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
+                      <div class="women_t  womens">
+                          <img src="images/slider3.jpg">
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
+                      <div class="women_f ">
+                          <img src="images/slider1.jpg" >
+                      </div>
+                      <div class="women_s  womens">
+                          <img src="images/slider2.jpg">
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      <div class="women_t  womens">
+                          <img src="images/slider3.jpg">
+                          <div class="womens_body">
+                              <p class="women_title">hello how are you</p>
+                              <div class="price">
+                                  <div class="p_icon">
+                                      <p><i class="fas fa-dollar-sign"></i> 45.5</p>
+                                      <span>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                      </span>
+                                  </div>
+                                  <div class="add_cart">
+                                      <button type="button">Add Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+                 
+            </section>
 
-</div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    });
+        
+  </script>
 </body>
+
 </html> 
