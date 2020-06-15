@@ -18,7 +18,7 @@
     	 
                     <div class="media4_only">
                         <img src="../png/art1.png" class="logo_media">
-                        <span id="hamburgerFs"><i class="fas fa-bars"></i></span>
+                        <span id="hamburgerFs" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
                             <ul class="shopping_cart_media">
                                     <li class="pos">
                                         <i class="fas fa-shopping-cart"></i>
@@ -152,6 +152,50 @@
                  </div>
                  
             </section>
+
+
+
+
+
+             <section class="myBlog">
+              
+              <div class="blog">
+                   <h3>From the blog</h3>
+                  <div class="blog_items">
+                     <img src="../images/slider1.jpg">
+                     <h5>Shorts</h5>
+                     <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                     
+                    </small>
+                    <div class="date">
+                      02
+                      <p>Feb</p>
+                    </div>
+                  </div>
+
+                  <div class="blog_items">
+                      <img src="../images/slider2.jpg">
+                      <h5>Shirts & Trousers</h5>
+                      <small>tempor incididunt ut labore et dolore magna aliqua.</small>
+                      <div class="date">
+                      02
+                      <p>Feb</p>
+                    </div>
+                  </div>
+
+                  <div class="blog_items">
+                      <img src="../images/slider3.jpg">
+                      <h5>Shoes </h5>
+                      <small>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...some thing</small>
+                      <div class="date">
+                      02
+                      <p>Feb</p>
+                    </div>
+                  </div>
+
+              </div>
+              
+            </section>
              
 
              <footer>
@@ -236,7 +280,14 @@
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     function	menuToggle(){
+    		var menu = document.querySelector("#hamburgerFs");
+    		var main_toggle = document.querySelector('.main_menu');
 
+    		main_toggle.classList.toggle('show');
+    	}
+    </script>
    
     </script>
     </body>
