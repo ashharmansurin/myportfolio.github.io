@@ -236,35 +236,33 @@ a.card_pro_link {
                 
                 height: 100%;
             }
-            .mens, .womens{
+            .mens{
                 width: 22%;
                 height: 100%;
                 padding: 7px;
             }
-            .men_container, .women_container{
+            .men_container{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                align-items: center;
             }
-            .men_f img, .women_f img{
+            .men_f img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            .mens img, .womens img{
+            .mens img{
                 width: 100%;
                 height: 70%;
                 object-fit: cover;
             }
-            p.men_title , p.women_title {
+            p.men_title{
     margin-top: 5px;
     padding-bottom: 8px;
     border-bottom: 1px solid lightgray;
 }
-.women_f {
-    order: 1;
-}
+
 .price{
     margin: 10px 0;
     display: flex;
@@ -287,6 +285,25 @@ a.card_pro_link {
     border: none;
     padding: 7px 10px;
     color: white;
+}
+/**women**/
+.women_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.women_container div{
+    margin: 10px;
+    padding: 10px;
+}
+.women_container img{
+    width: 100%;
+}
+.women_m{
+    flex: 2;
+}
+.women_p, .women_l{
+    border: 1px solid lightgray;
+    flex: 1;
 }
 /******footer*****/
 footer{
@@ -460,9 +477,15 @@ hr#bot {
 		.mens{
 			width: 100%!important;
 		}
+         .women_p, .women_l{
+            
+            width: 100%;
+            }
+
 		.blog{
           border-left: 2px solid lightgray;
            }
+
 	}
 
 	@media (max-width: 615px){
@@ -595,10 +618,17 @@ ul.shopping_cart_media{
 		.men_f{
 			width: 100%;
 		}
-		.mens, .womens{
+		.mens{
                 width: 45%;
                 height: 100%;
                 padding: 7px;
                 margin-top: 15px;
+            }
+            .women_m{
+                order: 1;
+                flex-basis: 100%
+            }
+            .women_p, .women_l{
+                flex-basis: 45%;
             }
 	}
