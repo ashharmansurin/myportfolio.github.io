@@ -305,6 +305,9 @@ a.card_pro_link {
     border: 1px solid lightgray;
     flex: 1;
 }
+women h3 {
+    margin-left: 35px;
+}
 /******footer*****/
 footer{
     width: 100%;
