@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-  <title>test</title>
+  <title>about us </title>
   <style type="text/css">
     *{
       margin: 0;
@@ -11,153 +11,202 @@
       box-sizing: border-box;
 
     }
-    .layout{
-      width: 85%;
-      margin: 0 auto;
-      height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: repeat(2,1fr);
-      grid-template-areas: 
-      "aside block1 block2 block3 "
-      "aside main main main"
-      "aside main main main";
-      padding: 30px;
-      grid-gap: 20px;
+    .wrapper{
+      width:100%;
+    }
+    nav {
+    width: 100%;
+    height: 15vh;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+    .main_menu{
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    .main_menu li{
+      margin:0 20px;
+    }
+    .main_menu a{
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+  
+    .logo img{
+      width:300px;
+    }
+    .hero{
+      width: 100%;
+      padding:20px;
+      
       
     }
-    aside{
-      display: flex;
-      padding: 10px;
-     justify-content: center;
-      grid-area: aside;
-      background: #7fc1817d;
-      -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
+    .hero_inner{
+      width: 96%;
+      background-color: lightgray;
+      margin:0 auto;
+      padding:25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      
+      grid-auto-rows: auto;
+      grid-gap: 30px;
     }
-    .details{
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
+    .img img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
-    .details_title{
-    margin: 40px 0 20px 0;
-  }
-  .details_sub{
-    margin-bottom: 15px; }
-
-    .getTouch{
-      padding: 8px 18px;
-    }
-    .block1{
-     
-     grid-area: block1;
-     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-  }
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-   }
-   .block2{
-    
-     grid-area: block2;
-     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-   }
-   .block3{
-     
-     grid-area: block3;
-     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-   }
-   .block4{
-     
-     grid-area: block4;
-     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-   }
-   
-   main{
-     
-     grid-area: main;
-     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.62);
-   }
-   .info_about{
+    .img {
     padding: 15px;
-   }
-   
-  .block{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  padding:15px;
+}
+.details h1 {
+    font-size: 100px;
+    color: green;
+}
+.details h3 {
+    font-size: 35px;
+}
+.details p {
+    text-align: justify;
+    font-size: 18px;
+}
+.cv_btn {
+    align-items: flex-end;
+    margin-top: auto;
+    padding:20px
+}
+a.cv {
+    color: white;
+    background-color: green;
+    display: inline-block; 
+    padding: 8px 28px;
+    text-decoration: none;
+    text-align: center;
+}
+.info {
     padding: 20px;
-
-  }
-  
-   @media (max-width:922px){
-    .layout{
-      grid-template-columns: 1fr;
-      grid-template-rows: 5fr 1fr 1fr 1fr 1fr;
-       grid-template-areas: 
-      "aside"
-      "block1"
-      "block2"
-      "block3"
-      "main";
-    }
-   }
-   
+    text-align: left;
+    position: relative;
+}
+.info p {
+    color: green;
+    font-size: 22px;
+}
+.avail, .website, .call, .email {
+    margin-bottom: 15px;
+}
+ul.menuIcon a {
+    display: block;
+    width: 0px;
+    height: 35px;
+    background-color: white;
+    text-align: right;
+    margin-bottom: 5px;
+    line-height: 35px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    transition: all 0.4s ease-in-out;
+    
+}
+ul.menuIcon a:hover{
+  width: 100px;
+}
+.social {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+ul.menuIcon img{
+  width:35px;
+  border: 1px solid white;
+    border-radius: 17px;
+  text-align: center;
+}
+.fb{
+  background-color:  #3b5998!important;
+}
+.linkd{
+  background-color:  #007bb6!important;
+}
+.twitter{
+  background-color: #00aced!important;
+}
+    
   </style>
 </head>
 <body>
-    <div class="layout">
-      <aside>
-        <div class="details">
-            
-              <img src="../imges/mansuri.jpg" width="200"; height="200" style="border-radius: 50%;">
-              <div class="details_title"><h2>Ashhar Mansuri</h2></div>
-              <div class="details_sub"><p>Web Designer</p></div>
-              <button type="button" class="getTouch">Get in Touch</button>
-        </div>
-      </aside>
+   <div class="wrapper">
+        <nav>
+          <div class="logo">
+               <img src="../png/ashharlogo.png" alt="">
+          </div>
+          <ul class="main_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">cv</a></li>
+            <li><a href="">projects</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+        </nav>
+        <section class="hero">
+             <div class="hero_inner">
+                   <div class="img">
+                      <img src="../images/mansuri.jpg" alt="">
+                  </div>
+                  <div class="details">
+                      <h1>Hello ,</h1>
+                      <h3>i am available for work</h3>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem velit dolores quo culpa, suscipit molestias architecto impedit enim libero, nulla rerum ducimus doloribus commodi est odit placeat aliquid! Enim, velit.</p>
+                      <div class="cv_btn">
+                        <a href="" class="cv">My CV</a>
+                      </div>
+                    </div>
+                  <div class="info">
+                      <div class="avail">
+                        <p href="">Available For:</p>
+                        <a>A Web Designer</a>
+                      </div>
+                      <div class="website">
+                        <p href="">Portfolio:</p>
+                        <a href="https://ashharmansurin.github.io/myportfolio.github.io/">Click to get Ashhar's Portfolio</a>
+                      </div>
+                      <div class="call">
+                        <p href="">Call</p>
+                        <a href="">+91 8839223218</a>
+                      </div>
 
-      <section class="block1 block" style="background-image: url(../imges/html.jpg);">
-        
-      </section>
-      <section class="block2 block" style="background-image: url(../imges/css3jpg.jpg);">block</section>
+                      <div class="email">
+                        <p href="">email</p>
+                        <a>ashharmansuri2511@gmail.com</a>
+                      </div>
+                      <div class="social">
+                        <ul class="menuIcon">
+                          <a href="" class="fb"><img src="../png/facebook.png"></a>
+          
+                          <a href="" class="linkd"><img src="../png/linkedin.png"></a>
+                          <a href="" class="twitter"><img src="../png/twitter.png"></a>
+                        
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+        </section>
 
-      <section class="block3 block" style="background-image: url(../imges/vanila.jpg);">
-      </section>
+        <main>
 
-     <main>
-       <div class="info_about">
-        <div class="about">
-         <h2>About Me</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-       </div>
-       <div class="about">
-         <h2>About Me</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-       </div>
-     </div>
-     </main>
-    </div>
+        </main>
+   </div>
 
 </body>
 </html>
